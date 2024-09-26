@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Drop Time Clock</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+    <div class="main-container">
+        <!-- Container for hours -->
+        <div class="container" id="hours">
+            <div class="droplet" id="hours-droplet"></div>
+            <div class="fill"></div>
+            <div class="tooltip" id="hours-tooltip"></div>
+        </div>
+        <div class="semicolon">:</div>
+        <!-- Container for minutes -->
+        <div class="container" id="minutes">
+            <div class="droplet" id="minutes-droplet"></div>
+            <div class="fill"></div>
+            <div class="tooltip" id="minutes-tooltip"></div>
+        </div>
+        <div class="semicolon">:</div>
+        <!-- Container for seconds -->
+        <div class="container" id="seconds">
+            <div class="droplet" id="seconds-droplet"></div>
+            <div class="fill"></div>
+            <div class="tooltip" id="seconds-tooltip"></div>
+        </div>
+    </div>
+
+    <button class="sound-button" onclick="enableSound()">Sound ON</button>
+
+    <script src="main.js"></script> <!-- Link to the JavaScript file -->
+</body>
+</html>
