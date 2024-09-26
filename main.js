@@ -88,6 +88,18 @@ function updateDropletShape(dropletId, fillPercentage) {
     droplet.style.borderRadius = `${width / 2}px / ${height / 2}px`; // Update border-radius to create an ellipse
 }
 
+// Add event listeners to containers for hover effect
+document.querySelectorAll('.container').forEach(container => {
+    container.addEventListener('mouseenter', () => {
+        const tooltip = container.querySelector('.tooltip');
+        tooltip.style.opacity = '1'; // Show tooltip
+    });
+    container.addEventListener('mouseleave', () => {
+        const tooltip = container.querySelector('.tooltip');
+        tooltip.style.opacity = '0'; // Hide tooltip
+    });
+});
+
 // Initial update and set interval to update every second
 updateFill(); // Call the updateFill function initially
 setInterval(updateFill, 1000); // Set an interval to call the updateFill function every second
